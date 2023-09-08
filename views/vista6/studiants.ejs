@@ -1,0 +1,29 @@
+<% extend('../layout', { title:'exo6' }) %>
+
+
+    <ul>
+        <li>
+           <span>Validated field with the value "in progress"</span>
+        </li>
+        <li>
+            <span>Sorted alphabetically "lastname".</span>
+        </li>
+      
+    </ul>
+
+
+
+<h4><%= message %></h4>
+
+<ul class="list-group">
+    <% students.forEach(function(student) { %>
+    <li class="list-group-item" ><strong><%= student.firstname %> <%= student.lastname %></strong>
+        <ul>
+            <li> Email : <%= student.email %></li>
+            <li> Phone : <%= student.phone %></li>
+            <li> Status : <%= student.validated %></li>
+            <li> Admin : <%= student.admin %></li>
+        </ul>
+    </li>
+    <% }); %>
+</ul>
